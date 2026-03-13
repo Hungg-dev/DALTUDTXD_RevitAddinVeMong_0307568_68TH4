@@ -3,8 +3,8 @@ using Autodesk.Revit.UI;
 using System.Reflection;
 using System.Windows.Media.Imaging;
 
-namespace DALTUDXD_RevitAddinVeMong_0304868_LOP68TH4.MainClass
-{
+namespace DALTUDXD_RevitAddinVeMong_0304868_LOP68TH4
+{ 
     public class MainClass : IExternalApplication
     {
         // Both OnStartup and OnShutdown must be implemented as public method
