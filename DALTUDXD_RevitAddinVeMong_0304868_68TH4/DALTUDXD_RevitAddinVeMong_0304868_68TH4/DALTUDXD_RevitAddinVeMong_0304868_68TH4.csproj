@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2025\RevitAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2025\RevitAPIUI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\" />
+    <Folder Include="Model\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="echo ===== POST BUILD =====&#xD;&#xA;&#xD;&#xA;echo TargetPath:&#xD;&#xA;echo $(TargetPath)&#xD;&#xA;&#xD;&#xA;set ADDIN_DIR=C:\ProgramData\Autodesk\Revit\Addins\2025\DALTUDTXD68TH4&#xD;&#xA;&#xD;&#xA;if not exist &quot;%25ADDIN_DIR%25&quot; mkdir &quot;%25ADDIN_DIR%25&quot;&#xD;&#xA;&#xD;&#xA;echo Copy DLL...&#xD;&#xA;copy &quot;$(TargetPath)&quot; &quot;%25ADDIN_DIR%25&quot; /Y&#xD;&#xA;&#xD;&#xA;echo Copy ADDIN...&#xD;&#xA;copy &quot;$(ProjectDir)DALTUDTXD_RevitAddinVeMong_0304868_68TH4.addin&quot; &quot;C:\ProgramData\Autodesk\Revit\Addins\2025\&quot; /Y&#xD;&#xA;&#xD;&#xA;echo Copy Assets...&#xD;&#xA;xcopy &quot;$(ProjectDir)Assets&quot; &quot;%25ADDIN_DIR%25\Assets&quot; /E /I /Y&#xD;&#xA;&#xD;&#xA;echo ===== DONE =====&#xD;&#xA;pause&#xD;&#xA;echo ===== POST BUILD =====" />
+  </Target>
+
+</Project>

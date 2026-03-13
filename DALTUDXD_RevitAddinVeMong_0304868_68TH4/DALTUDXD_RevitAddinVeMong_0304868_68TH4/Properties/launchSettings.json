@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "DALTUDXD_RevitAddinVeMong_0304868_68TH4": {
+      "commandName": "Project"
+    },
+    "Debug Revit 2025": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\Autodesk\\Revit 2025\\Revit.exe"
+    }
+  }
+}
