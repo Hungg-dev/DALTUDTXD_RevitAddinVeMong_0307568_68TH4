@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>DALTUDTXD68TH4 Addin RevitAddinVeMong</Name>
+		<Assembly>DALTUDXD_RevitAddinVeMong_0304868_68TH4.dll</Assembly>
+		<AddInId>6CB45E92-3801-4A8B-A85E-7A22B78FD21D</AddInId>
+		<FullClassName>DALTUDXD_RevitAddinVeMong_0304868_68TH4.MainClass</FullClassName>
+		<VendorId>0304868@st.huce.edu.vn</VendorId>
+		<VendorDescription>HUCE DAI HOC XAY DUNG HA NOI</VendorDescription>
+	</AddIn>
+	<AddIn Type="Command">
+		<Name> Hello World </Name>
+		<Assembly>DALTUDXD_RevitAddinVeMong_0304868_68TH4.dll</Assembly>
+		<AddIn>17D1E421-0E05-4672-A479-83D6C4B1F327</AddIn>
+		<FullClassName> DALTUDXD_RevitAddinVeMong_0304868_68TH4.HelloWorldCommand</FullClassName>
+		<VendorId>0304868@st.huce.edu.vn</VendorId>
+		<VendorDescription>HUCE DAI HOC XAY DUNG HA NOI</VendorDescription>
+	</AddIn>
+</RevitAddIns>
