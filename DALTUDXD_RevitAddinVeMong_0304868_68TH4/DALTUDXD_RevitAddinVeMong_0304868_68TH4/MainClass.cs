@@ -3,7 +3,7 @@ using Autodesk.Revit.UI;
 using System.Reflection;
 using System.Windows.Media.Imaging;
 
-namespace DALTUDXD_RevitAddinVeMong_0304868_LOP68TH4
+namespace DALTUDXD_RevitAddinVeMong_0304868_LOP68TH4.MainClass
 { 
     public class MainClass : IExternalApplication
     {
